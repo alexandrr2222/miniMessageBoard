@@ -3,7 +3,7 @@ import express from "express";
 import { indexRouter } from "./routes/indexRouter";
 
 const app = express();
-const PORT = 8081;
+const PORT = process.env.PORT || 8081;
 
 const assetsPath = path.join(import.meta.dirname, "public");
 app.set("view engine", "ejs");
