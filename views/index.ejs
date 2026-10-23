@@ -6,16 +6,18 @@
     <title><%= title %></title>
   </head>
   <body>
+    <%- include('setUsername') %>
     <ul>
-<% messages.forEach(msg => { %>
+      <% messages.forEach(msg => { %>
         <li>
-            <div>
-                <p> <%= msg.user %> </p>
-                <time datetime=""> <%= msg.added %></time>
-            </div>
-            <p> <%= msg.text %></p>
+          <div>
+            <p> <%= msg.user %> </p>
+            <time datetime=""> <%= msg.added %></time>
+          </div>
+          <p> <%= msg.text %></p>
         </li>
-        <% });%>
+      <% });%>
     </ul>
+    <%- include('newMessage') %>
   </body>
 </html>

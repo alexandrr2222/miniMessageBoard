@@ -8,10 +8,12 @@ const PORT = 8081;
 const assetsPath = path.join(import.meta.dirname, "public");
 app.set("view engine", "ejs");
 app.use(express.static(assetsPath));
+app.use(express.urlencoded({ extended: true }));
 
 // after setup
 
 app.use("/", indexRouter);
+app.use("/username", indexRouter);
 
 app.listen(PORT, (error) => {
   if (error) {
