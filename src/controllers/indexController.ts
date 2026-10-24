@@ -10,7 +10,7 @@ export function renderMessageBoard(req: Request, res: Response) {
 export function formController(req: Request, res: Response) {
   const newMessage = req.body.chatInput;
   messages.push({ text: newMessage, user: username, added: new Date() });
-  res.render("index", { title: "Mini Messageboard", messages: messages });
+  res.redirect("/");
 }
 
 export function nameController(req: Request, res: Response) {

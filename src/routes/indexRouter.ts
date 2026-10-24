@@ -5,5 +5,5 @@ import { formController, nameController } from "../controllers/indexController";
 export const indexRouter = Router();
 
 indexRouter.get("/", renderMessageBoard);
-indexRouter.post("/", formController);
+indexRouter.post("/newpost", formController);
 indexRouter.post("/username", nameController);
